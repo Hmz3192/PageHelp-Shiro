@@ -24,7 +24,7 @@ public class TransApi {
         String[] res_1 = res.split(",");//根据”，”符号分成数组
         int length = 0;
         //计算前三个的长度，为了避免在翻译的句子中包含”，“这个符号混淆了。如“你好，中国”。
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i < 3; i++) {
             length += res_1[i].length();
         }
         //开始的位置加三是算上最开始句子的三个”，“，加7是为了减少后面的，结束为止-4。

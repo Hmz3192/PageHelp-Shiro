@@ -21,17 +21,15 @@
             type: "post",
             url: "${pageContext.request.contextPath }/tran/tran.do",
             contentType: "application/json;charset=utf-8",
-            data:'{"res":"中国"}',
+            data:{"res":res},
             success:function (data) {
-//                alert(data);
+                alert("成功");
             }
         });
     }
 </script>
-<form action="${pageContext.request.contextPath }/tran/tran.do" method="post">
     <input type="text" name="res" id="res">
     <input type="submit" value="diyizhong">
-</form>
     <input type="button" value="提交" onclick="sendJson()">
 <h2>${res}</h2>
 

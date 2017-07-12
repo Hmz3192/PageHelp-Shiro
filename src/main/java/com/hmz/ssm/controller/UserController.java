@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +38,7 @@ public class UserController {
     @RequestMapping("/show")
     public String Show(){
 
-        return "Login";
+        return "LoginOld";
     }
     @RequestMapping("/Register")
     public String Register(){
@@ -53,7 +52,7 @@ public class UserController {
             session.setAttribute("username",user.getUsername());
             return "all";
         }else
-            return "Login";
+            return "LoginOld";
 
 
     }
@@ -72,7 +71,7 @@ public class UserController {
             return "all";
         } else {
             System.out.print("账户密码输入错误");
-            return "Login";
+            return "LoginOld";
         }
     }
 

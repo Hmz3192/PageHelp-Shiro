@@ -21,9 +21,9 @@ public class TranController {
 
 
     @RequestMapping(value = "/tran",method = RequestMethod.POST)
-    public String Translate(Tran tran, Model model) {
+    public String Translate(@RequestBody  Tran tran, Model model) {
         TransApi transApi = new TransApi(APP_ID, SECURITY_KEY);
-        String res= "中国";
+        String res= tran.getRes();
         System.out.println(res);
 
         String result = transApi.getTransResult(res, "auto", "en");
